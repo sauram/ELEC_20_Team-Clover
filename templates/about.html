@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    {% block content %}
+
+     <!--///Home slider /// -->                 
+     <div class="carousel carousel-slider" style="width: 100%; height:750px ; ">
+      <!--
+          <a class="carousel-item" href="#one!"><img src="http://www.simpleimageresizer.com/_uploads/photos/bc0941ba/forest-fire-4k-yf-1024x768_4_968x450_1_950x430.jpg"></a>
+      -->
+     
+      <a class="carousel-item" href="#one!"><img src="http://getwallpapers.com/wallpaper/full/e/e/2/212977.jpg"></a>
+      <a class="carousel-item" href="#two!"><img src="http://getwallpapers.com/wallpaper/full/9/c/c/213005.jpg"></a>
+      <a class="carousel-item" href="#three!"><img src="https://wallpapermania.eu/images/lthumbs/2020-01/10223_Fireman-works-to-stop-the-big-fire-in-Australia-Forest-burn.jpg"></a>
+      
+    </div>
+    <div >
+
+        <div class='col s6' style="padding-left: 400px; padding-right: 280px;">
+            <h1 style="color: #C3530D;">
+                About
+            </h1>
+                <h4>
+                <blockquote>
+                <b>R.A.F.P. </b>or Real-time Autonomous Fire Predictor is an app built to predict <br>
+                and prevent the possible incidents of bush and forest fires in an area. <br>
+                The motivation for this app came from the recent mishaps caused by the <br>
+                fires that originated in the Amazon Rain Forests as well as the Australian <br>
+                forests which caused a huge loss to flora and fauna. With the effect of Global <br>
+                warming increasing at an alarming rate, we believe that this idea,  <br>
+                if implemented at a large scale, can really play in important role in <br>
+                <b>saving the nature.</b>
+                </blockquote>
+            </h4>
+        </div>
+    </div>>
+        
+    </div>
+    <footer class="page-footer black">
+        <div class="container ">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Developed by</h5>
+              <h4 class="grey-text text-lighten-4">Team Clover</h4>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Developers</h5>
+              <ul>
+                <li class="grey-text text-lighten-3">Saurabh Singh Gautam</a></li>
+                <li class="grey-text text-lighten-3">David Gokimmung</a></li>
+                <li class="grey-text text-lighten-3">Sagar Prateek</a></li>
+                <li class="grey-text text-lighten-3">Pulkit Jeph</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2020 Copyright Team Clover
+          </div>
+        </div>
+      </footer>
+     
+    
+    {% endblock content %}
+
+    {% block javascript %}
+    <script>
+        $(document).ready(function(){
+        $('.carousel.carousel-slider').carousel({
+          
+          fullWidth: true,
+          indicators: true,
+          duration: 200,
+          });
+        });
+    </script>
+    
+    {%endblock javascript%}

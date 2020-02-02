@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RAFD</title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <script type="text/javascript" language="Javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.11.3.min.js"> </script> 
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+        <style>
+            *{ font-family: 'Roboto', sans-serif; }
+            
+        </style> 
+        {% block head%}
+        {% endblock head%}
+         
+    </head>
+    <body>
+        <nav style="background: rgba(0,0,0,0.9);">
+            <div class="nav-wrapper container">
+              <a href="#" class="brand-logo">R.A.F.P.</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'record' %}">Records</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+              </ul>
+            </div>
+          </nav>
+        <div>
+            {%block content%}
+            {%endblock content%}
+        </div>
+
+        <div class="loader-wrapper">
+            <span class="loader"><span class="loader-inner"></span></span>
+          </div>
+          <script>
+              $(window).on("load",function(){
+                $(".loader-wrapper").fadeOut(2000);
+              });
+          </script>>
+        {% block javascript%} 
+        {%endblock javascript%}
+    </body>
+</html>

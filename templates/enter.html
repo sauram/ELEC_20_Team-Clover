@@ -1,0 +1,61 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div style="background-image:url('http://getwallpapers.com/wallpaper/full/9/c/c/213005.jpg');  background-repeat: no-repeat;
+    background-attachment: fixed;object-fit: fill;" >
+
+        <div class="row"  >
+            <div class="col s6 offset-s3 " style=" margin-top: 50px;">
+            <div class="card blue-grey lighten-5 z-depth-3" style="width: 800px;height: 300px;left: 7%; border-width:3px ;border-color:  orange;border-style: solid;border-radius: 40px;">
+                <div class="card-content black-text">
+                   <h4 style="color: red;"> <span class="card-title">Latest Record</span></h4>
+                <span class="card-title">{{f1.today}} | {{f1.time}}</span>
+                
+                <h4>Predicted Area : {{f1.area |floatformat:"3"}}</h4>
+                <div class="card-action">
+                    <p>Temperature : {{f1.e}} | R.H. : {{f1.f}} | Wind : {{f1.g}} | Rain : {{f1.h}}</p>
+                </div>
+                </div>
+                
+                
+            </div>
+            <div class="card blue-grey lighten-5 z-depth-3" style="width: 800px;height: 200px;left: 7%; border-width:3px ;border-color:  orange;border-style: solid;border-radius: 40px;">
+                <div class="card-content black-text">
+                <span class="card-title">{{f2.today}} | {{f2.time}}</span>
+                <h4>Predicted Area : {{f2.area |floatformat:"3"}}</h4>
+                <div class="card-action">
+                    <p>Temperature : {{f2.e}} | R.H. : {{f2.f}} | Wind : {{f2.g}} | Rain : {{f2.h}}</p>
+                </div>
+                </div>
+                
+                
+            </div>
+            <div class="card blue-grey lighten-5 z-depth-3" style="width: 800px;height: 200px;left: 7%; border-width:3px ;border-color:  orange;border-style: solid;border-radius: 40px;">
+                <div class="card-content black-text">
+                <span class="card-title">{{f3.today}} | {{f3.time}}</span>
+                <h4>Predicted Area : {{f3.area |floatformat:"3"}}</h4>
+                <div class="card-action">
+                    <p>Temperature : {{f2.e}} | R.H. : {{f2.f}} | Wind : {{f2.g}} | Rain : {{f2.h}}</p>
+                </div>
+                </div>
+               
+                
+            </div>
+          </div>
+        </div>
+        
+    </div>
+
+    
+
+{%endblock content%}
+       
+
+{%block javascript%}
+<script>
+    setTimeout(function(){ window.location.reload(1); }, 10000);
+</script>
+{%endblock javascript%}
+        

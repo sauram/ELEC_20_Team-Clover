@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="background-image:url('http://getwallpapers.com/wallpaper/full/9/c/c/213005.jpg');  background-repeat: no-repeat;
+background-attachment: fixed;object-fit: fill;">
+    {% for post in f3 %}
+    <div class="row">
+        <div class="col s6 offset-s3">
+        <div class="card blue-grey lighten-5 z-depth-3 " style="border-width:3px ;border-color:  orange;border-style: solid;border-radius: 40px;">
+            <div class="card-content black-text">
+            <span class="card-title">{{post.today}} | {{post.time}}</span>
+            <h5><b>Predicted Area :</b> {{post.area |floatformat:"3"}} hectares</h5>
+            <div class="card-action">
+                <p>Temperature : {{post.e}} | R.H. : {{post.f}} | Wind : {{post.g}} | Rain : {{post.h}}</p>
+            </div>
+            </div>
+            
+            
+        </div>
+    
+      </div>
+    </div>
+{% endfor %}
+</div>
+
+{%endblock content%}
+       
+
+{%block javascript%}
+<script>
+    setTimeout(function(){ window.location.reload(1); }, 10000);
+</script>
+{%endblock javascript%}
